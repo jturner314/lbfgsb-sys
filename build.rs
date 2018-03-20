@@ -19,7 +19,7 @@ fn main() {
     let os = if cfg!(target_os = "macos"){"Macos"}
              else if cfg!(target_os = "windows"){"Windows"}
              else {"Linux"};
-    let com = if os=="Windows" {"mingw32-make"}else{"make"};
+    let com = if os=="Windows" {"make"}else{"make"};
     run(Command::new(com)
                 .arg(kind)
                 .arg(format!("OUTPUT={}",output.display()))
