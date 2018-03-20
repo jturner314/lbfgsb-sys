@@ -26,7 +26,7 @@ ifeq ($(OSNAME),Windows)
 	$(FC) $(LINPACK) $(FFLAGS) $(OUTPUT)/linpack.o
 	$(FC) $(BLAS) $(FFLAGS) $(OUTPUT)/blas.o
 	$(FC) $(TIMER) $(FFLAGS) $(OUTPUT)/timer.o
-    $(FC) $(STRING) $(FFLAGS) $(OUTPUT)/string.o
+	$(FC) $(STRING) $(FFLAGS) $(OUTPUT)/string.o
 	@echo "creating static library"
 	$(FC) $(SFlAG) $(OUTPUT)/liblbfgs.dll $(OUTPUT)/*.o
 endif
